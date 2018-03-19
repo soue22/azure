@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Aglou-plage-Arche-sur-la-plage-de-legzira.jpeg" />
+    <Content Include="Content\Images\plageArbre.jpg" />
+    <Content Include="Content\Images\plageChemin.jpg" />
+    <Content Include="Content\Images\Plage_de_myrtos-min.JPG" />
+    <Content Include="Content\Images\Plage_de_myrtos.JPG" />
+    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
