@@ -92,6 +92,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Continent.cs" />
+    <Compile Include="Models\Pays.cs" />
+    <Compile Include="Models\Regions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

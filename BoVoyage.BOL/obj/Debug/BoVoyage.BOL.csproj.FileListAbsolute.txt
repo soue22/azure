@@ -1,0 +1,5 @@
+D:\Documents\Cours\ProjetWebStatic\ProjetWebStatic\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.dll
+D:\Documents\Cours\ProjetWebStatic\ProjetWebStatic\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.pdb
+D:\Documents\Cours\ProjetWebStatic\ProjetWebStatic\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
+D:\Documents\Cours\ProjetWebStatic\ProjetWebStatic\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
+D:\Documents\Cours\ProjetWebStatic\ProjetWebStatic\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
