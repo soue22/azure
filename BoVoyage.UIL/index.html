@@ -17,20 +17,18 @@
 
         <h1>Bienvenue sur BoVoyage > Recherche</h1>
         <!-- SELECT DES CONTINENTS -->
-        <select class="marginTop form-control" id="continentSelection">
+        <select name="continent" class="marginTop form-control" id="continentSelection">
             <option value="" disabled selected>Choisissez le continent</option>
         </select>
         <!-- SELECT DES PAYS -->
-        <select class="marginTop form-control" id="paysSelection">
+        <select name="pays" class="marginTop form-control" id="paysSelection">
             <option value="" disabled selected>Choisissez le pays</option>
         </select>
         <!-- SELECT DES RÉGIONS -->
-        <select class="marginTop form-control" id="regionSelection">
+        <select name="region" class="marginTop form-control" id="regionSelection">
             <option value="" disabled selected>Choisissez la région</option>
         </select>
-
-
-
+        <button id="btnrecherche" class="marginTop btn btn-primary">Rechercher</button>
         <!-- Exemple de thumbnail pour liste des objets retournés -->
         <div class="marginTop row">
             <div class="col-sm-6 col-md-4">
@@ -38,7 +36,6 @@
                     <img style="width:100%" src="http://fakeimg.pl/300x100/">
                     <div class="caption">
                         <h3>NomDuVoyage</h3>
-
                         <p>.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. quand un peintre anonyme assem</p>
                         <p><a href="#" class="btn btn-primary" role="button">Voir</a></p>
                     </div>
@@ -50,7 +47,7 @@
 
     <!-- FIN EXEMPLE /!\Au div class row -->
     <script>
-        url = "http://localhost:61325/api/voyage/";
+        url = "http://localhost:61325/api/recherche/";
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
@@ -73,6 +70,9 @@
                     $('#continentSelection').html(continent);
                 }
             }
+        });
+        $('#btnrecherche').click(function () {
+            alert($("select[name='continent'] > option:selected").val());
         });
     </script>
 </body>
