@@ -9,3 +9,8 @@ D:\Documents\Cours\ProjetWebStatic\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.cspr
 D:\Documents\Cours\ProjetWebStatic\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
 D:\Documents\Cours\ProjetWebStatic\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
 D:\Documents\Cours\ProjetWebStatic\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
+S:\Formation\Max\Projet\TD04\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.dll
+S:\Formation\Max\Projet\TD04\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.pdb
+S:\Formation\Max\Projet\TD04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
+S:\Formation\Max\Projet\TD04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
+S:\Formation\Max\Projet\TD04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
