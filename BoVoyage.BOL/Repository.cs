@@ -37,6 +37,24 @@ namespace BoVoyage.BOL
                 default: return null;
             }
         }
+        public ArrayList POSTallRegions(int id)
+        {
+            switch (id)
+            {
+                case 11:
+                    return new ArrayList
+              {
+                    111,"Coucou Enfin:!!!!!!!",
+                    112, "C'était super facile!!!finalement" };
+                case 22:
+                    return new ArrayList
+                    {
+                        221, "ahhhhhhhhhhhh",
+                        222, "pffffffffffffffff",
+                    };
+                default: return null;
+            }
+        }
         public ArrayList GetAllVoyages()
         {
             return new ArrayList

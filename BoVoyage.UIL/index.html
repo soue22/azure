@@ -88,7 +88,7 @@
         }
         function affichePays(liste) {
             var pays = "";
-            for (i = 0, i < liste.length; i++;) {
+            for (i = 0; i < liste.length; i++) {
                 pays += '<option id="pays_' + liste[i].id + '" class="pays" href="#">' + liste[i].nom + '</option>';
                 $('#paysSelection').html(pays);
             }
