@@ -24,13 +24,11 @@ namespace BoVoyage.BOL
         {
             return new ArrayList
               {
-                    1, "Côte D'Ivoire",
-                    2, "Égypte",
-                    3, "Afrique2",
-                    4, "Afrique3",
-                    5, "Afrique4",
-                    6, "Afrique5",
-                    7, "Afrique6"
+                    11, "Côte D'Ivoire",
+                    12, "Égypte",
+                    21, "Afrique2",
+                    22, "Afrique3",
+                   
                     //Bon après ici, j'sais pas trop quoi faire, comment on peut lier les continents aux pays? Erf erf
             };
         }
