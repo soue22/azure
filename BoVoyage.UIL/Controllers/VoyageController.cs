@@ -23,15 +23,15 @@ namespace BoVoyage.UIL.Controllers
             }
             return listeContinents;
         }
-        public IEnumerable<Pays> GetAllPays()
-        {
-            ArrayList liste = Context.GetAllPays();
-            List<Pays> listPays = new List<Pays>();
-            for(int i=0;i<listPays.Count;i += 2)
-            {
-                listPays.Add(new Pays { id = int.Parse(liste[i].ToString()), nom = liste[i + 1].ToString() });
-            }
-            return listPays;
-        }
+        //public IEnumerable<Pays> GetAllPays()
+        //{
+        //    ArrayList liste = Context.GetAllPays();
+        //    List<Pays> listPays = new List<Pays>();
+        //    for(int i=0;i<listPays.Count;i += 2)
+        //    {
+        //        listPays.Add(new Pays { id = int.Parse(liste[i].ToString()), nom = liste[i + 1].ToString() });
+        //    }
+        //    return listPays;
+        //}
     }//On aura a définir d'autres modèles
 }

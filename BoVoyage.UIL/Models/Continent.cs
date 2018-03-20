@@ -9,6 +9,6 @@ namespace BoVoyage.UIL.Models
     {
         public int id; 
         public string nom;
-        List<Pays> listPays;
+        //List<Pays> listPays;
     }
 }

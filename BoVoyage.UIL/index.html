@@ -6,55 +6,71 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Content/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
     <div class="container whiteBkgrndOpacity">
-        
-            <h1>Bienvenue sur BoVoyage > Recherche</h1>
-            <!-- SELECT DES CONTINENTS -->
-            <select class="marginTop form-control" id="continentSelection">
-                <option value="" disabled selected>Choisissez le continent</option>
-            </select>
-            <!-- SELECT DES PAYS -->
-            <select class="marginTop form-control" id="paysSelection">
-                <option value="" disabled selected>Choisissez le pays</option>
-            </select>
-            <!-- SELECT DES RÉGIONS -->
-            <select class="marginTop form-control" id="regionSelection">
-                <option value="" disabled selected>Choisissez la région</option>
-            </select>
+
+        <h1>Bienvenue sur BoVoyage > Recherche</h1>
+        <!-- SELECT DES CONTINENTS -->
+        <select class="marginTop form-control" id="continentSelection">
+            <option value="" disabled selected>Choisissez le continent</option>
+        </select>
+        <!-- SELECT DES PAYS -->
+        <select class="marginTop form-control" id="paysSelection">
+            <option value="" disabled selected>Choisissez le pays</option>
+        </select>
+        <!-- SELECT DES RÉGIONS -->
+        <select class="marginTop form-control" id="regionSelection">
+            <option value="" disabled selected>Choisissez la région</option>
+        </select>
 
 
 
-            <!-- Exemple de thumbnail pour liste des objets retournés -->
-            <div class="marginTop row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img style="width:100%" src="http://fakeimg.pl/300x100/">
-                        <div class="caption">
-                            <h3>NomDuVoyage</h3>
+        <!-- Exemple de thumbnail pour liste des objets retournés -->
+        <div class="marginTop row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img style="width:100%" src="http://fakeimg.pl/300x100/">
+                    <div class="caption">
+                        <h3>NomDuVoyage</h3>
 
-                            <p>.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. quand un peintre anonyme assem</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Voir</a></p>
-                        </div>
+                        <p>.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. quand un peintre anonyme assem</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Voir</a></p>
                     </div>
                 </div>
             </div>
         </div>
-  
+    </div>
 
-        <!-- FIN EXEMPLE /!\Au div class row -->
-        <script>
-            url = "http://localhost:61325/api/voyage/";
-            
+
+    <!-- FIN EXEMPLE /!\Au div class row -->
+    <script>
+        url = "http://localhost:61325/api/voyage/";
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (data, status) {
+                    if (status == "success") {
+                        afficheContinent(data);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('#message').html('Erreur de communication');
+                }
+            });
             function afficheContinent(liste) {
                 for (i = 0; i < liste.length; i++) {
                     var continent = '<option id="continent_' + liste[i].length + '" class="continent" href="#">' + liste[i] + '</option>';
                     $('#continentSelection').html(continent);
                 }
             }
-        </script>
+        });
+    </script>
 </body>
 </html>
