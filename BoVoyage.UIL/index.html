@@ -55,6 +55,8 @@
             $.ajax({
                 type: "GET",
                 url: url,
+                ContentType: "application/json",
+                DataType: "application/json",
                 success: function (data, status) {
                     if (status == "success") {
                         afficheContinent(data);
@@ -65,8 +67,9 @@
                 }
             });
             function afficheContinent(liste) {
+                var continent = '';
                 for (i = 0; i < liste.length; i++) {
-                    var continent = '<option id="continent_' + liste[i].length + '" class="continent" href="#">' + liste[i] + '</option>';
+                 continent += '<option id="continent_' + liste[i].length + '" class="continent" href="#">' + liste[i].nom + '</option>';
                     $('#continentSelection').html(continent);
                 }
             }

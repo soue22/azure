@@ -19,8 +19,7 @@ namespace BoVoyage.BOL
                 5, "Océanie"
             };
         }
-
-
+        
         public ArrayList GetAllPays()
         {
             return new ArrayList
