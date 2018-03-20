@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace BoVoyage.UIL.Controllers
 {
-    public class VoyageController : ApiController
+    public class RechercheController : ApiController
     {
         private Repository Context = new Repository();
         public IEnumerable<Continent> GetAllContinents()
