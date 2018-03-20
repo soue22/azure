@@ -94,12 +94,14 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\RechercheController.cs" />
+    <Compile Include="Controllers\VoyageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Continent.cs" />
     <Compile Include="Models\Pays.cs" />
     <Compile Include="Models\Regions.cs" />
+    <Compile Include="Models\Voyage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
