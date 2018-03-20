@@ -19,4 +19,3 @@ C:\Users\Adminl\Source\Repos\TP04\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.pdb
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
-C:\Users\Adminl\Source\Repos\TP04\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csprojResolveAssemblyReference.cache

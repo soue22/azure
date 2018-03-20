@@ -19,21 +19,16 @@ namespace BoVoyage.BOL
                 5, "Océanie"
             };
         }
-
-        public ArrayList GetAllPays(int id)
+        public ArrayList POSTallPays(int id)
         {
             switch (id)
-
             {
                 case 1:
-
                     return new ArrayList
               {
                     11,"Côte D'Ivoire",
                     12, "Égypte" };
-
                 case 2:
-
                     return new ArrayList
                     {
                         21, "gfgfgfgf",
@@ -41,24 +36,14 @@ namespace BoVoyage.BOL
                     };
                 default: return null;
             }
-            
         }
-
-
-
-
-
-
-
-            public ArrayList GetAllVoyages()
-
+        public ArrayList GetAllVoyages()
         {
             return new ArrayList
             {
                  1311, "Liste de tous les voyages dispo",
                  2354, "Séjour pas cher en Floride \t 400 euros\t 5 places",
                  2355, "Séjour pas cher en Texas \t 400 euros\t 5 places",
-                        
             };
         }
     }

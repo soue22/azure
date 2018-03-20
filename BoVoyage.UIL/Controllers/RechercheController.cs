@@ -23,10 +23,10 @@ namespace BoVoyage.UIL.Controllers
             }
             return listeContinents;
         }
-        public IEnumerable<Pays> GetAllPays(int id)
+        public IEnumerable<Pays> POSTallPays(int id)
         {
 
-            ArrayList liste = Context.GetAllPays(id);
+            ArrayList liste = Context.POSTallPays(id);
             List<Pays> listePays = new List<Pays>();
             for (int i = 0; i < liste.Count; i += 2)
             {
@@ -34,21 +34,6 @@ namespace BoVoyage.UIL.Controllers
             }
             return listePays;
         }
-
-        //public IEnumerable<Pays> GetAllRegions(int id)
-        //{
-
-        //    ArrayList liste = Context.GetAllRegions(id);
-        //    List<Pays> listePays = new List<Pays>();
-        //    for (int i = 0; i < liste.Count; i += 2)
-        //    {
-        //        listePays.Add(new Pays { id = int.Parse(liste[i].ToString()), nom = liste[i + 1].ToString() });
-        //    }
-        //    return listePays;
-        //}
-
-
-
 
     }//On aura a définir d'autres modèles
 }

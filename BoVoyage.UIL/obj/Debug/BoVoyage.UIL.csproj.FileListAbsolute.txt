@@ -348,3 +348,4 @@ C:\Users\Adminl\Source\Repos\TP04\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.csprojReso
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.csproj.CoreCompileInputs.cache
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.dll
 C:\Users\Adminl\Source\Repos\TP04\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.pdb
+C:\Users\Adminl\Source\Repos\TP04\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.csproj.CopyComplete

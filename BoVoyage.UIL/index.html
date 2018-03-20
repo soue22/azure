@@ -43,40 +43,59 @@
             </div>
         </div>
     </div>
-
-
     <!-- FIN EXEMPLE /!\Au div class row -->
     <script>
         url = "http://localhost:61325/api/recherche/";
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: url,
-                ContentType: "application/json",
-                DataType: "application/json",
-                success: function (data, status) {
-                    if (status == "success") {
-                        afficheContinent(data);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    $('#message').html('Erreur de communication');
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            ContentType: "application/json",
+            DataType: "application/json",
+            success: function (data, status) {
+                if (status == "success") {
+                    afficheContinent(data);
                 }
-            });
-            function afficheContinent(liste) {
-                var continent = '';
-                for (i = 0; i < liste.length; i++) {
-                 continent += '<option id="continent_' + liste[i].length + '" class="continent" href="#">' + liste[i].nom + '</option>';
-                    $('#continentSelection').html(continent);
-                }
+            },
+            error: function (xhr, status, error) {
+                $('#message').html('Erreur de communication');
             }
         });
-       
+        function afficheContinent(liste) {
+            var continent = '';
+            for (i = 0; i < liste.length; i++) {
+                continent += '<option id="' + liste[i].id + '" class="continent" href="#">' + liste[i].nom + '</option>';
+                $('#continentSelection').html(continent);
+
+            }
+            $('#continentSelection').change(function () {
+                var id = $('#continentSelection').find(':selected')[0].id;
+                $.ajax({
+                    type: "POST",
+                    url: url + id,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            affichePays(data);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
+            });
+        }
+        function affichePays(liste) {
+            var pays = "";
+            for (i = 0, i < liste.length; i++;) {
+                pays += '<option id="pays_' + liste[i].id + '" class="pays" href="#">' + liste[i].nom + '</option>';
+                $('#paysSelection').html(pays);
+            }
+        }
+        
 
 
-        $('#btnrecherche').click(function () {
-            alert($("select[name='continent'] > option:selected").val());
-        });
     </script>
 </body>
 </html>
