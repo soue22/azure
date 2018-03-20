@@ -6,6 +6,7 @@ namespace BoVoyage.UIL.Models
     {
         public string nom;
         public int id;
+       
         List<Regions> listRegions;
     }
 }

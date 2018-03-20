@@ -19,17 +19,46 @@ namespace BoVoyage.BOL
                 5, "Océanie"
             };
         }
-        
-        public ArrayList GetAllPays()
+
+        public ArrayList GetAllPays(int id)
+        {
+            switch (id)
+
+            {
+                case 1:
+
+                    return new ArrayList
+              {
+                    11,"Côte D'Ivoire",
+                    12, "Égypte" };
+
+                case 2:
+
+                    return new ArrayList
+                    {
+                        21, "gfgfgfgf",
+                        22, "gfgfgfggf",
+                    };
+                default: return null;
+            }
+            
+        }
+
+
+
+
+
+
+
+            public ArrayList GetAllVoyages()
+
         {
             return new ArrayList
-              {
-                    11, "Côte D'Ivoire",
-                    12, "Égypte",
-                    21, "Afrique2",
-                    22, "Afrique3",
-                   
-                    //Bon après ici, j'sais pas trop quoi faire, comment on peut lier les continents aux pays? Erf erf
+            {
+                 1311, "Liste de tous les voyages dispo",
+                 2354, "Séjour pas cher en Floride \t 400 euros\t 5 places",
+                 2355, "Séjour pas cher en Texas \t 400 euros\t 5 places",
+                        
             };
         }
     }
