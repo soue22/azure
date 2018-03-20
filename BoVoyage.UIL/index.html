@@ -92,6 +92,30 @@
                 pays += '<option id="pays_' + liste[i].id + '" class="pays" href="#">' + liste[i].nom + '</option>';
                 $('#paysSelection').html(pays);
             }
+            $('#paysSelection').change(function () {
+                var id = $('#paysSelection').find(':selected')[0].id;
+                $.ajax({
+                    type: "PUT",
+                    url: url + id,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            afficheRegions(data);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
+            });
+        }
+        function afficheRegions(liste) {
+            var pays = "";
+            for (i = 0; i < liste.length; i++) {
+                regions += '<option id="' + liste[i].id + '" class="regions" href="#">' + liste[i].nom + '</option>';
+                $('#regionsSelection').html(regions);
+            }
         }
         
 

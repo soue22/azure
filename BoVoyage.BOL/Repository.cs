@@ -37,7 +37,7 @@ namespace BoVoyage.BOL
                 default: return null;
             }
         }
-        public ArrayList POSTallRegions(int id)
+        public ArrayList PutallRegions(int id)
         {
             switch (id)
             {
