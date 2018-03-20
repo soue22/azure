@@ -19,6 +19,10 @@ namespace BoVoyage.UIL
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+               name: "ApiPays",
+               routeTemplate: "api/{controller}/{id}/{idPays}"
+           );
         }
     }
 }

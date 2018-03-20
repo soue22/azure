@@ -37,9 +37,9 @@ namespace BoVoyage.BOL
                 default: return null;
             }
         }
-        public ArrayList PutallRegions(int id)
+        public ArrayList PutallRegions(int idPays)
         {
-            switch (id)
+            switch (idPays)
             {
                 case 11:
                     return new ArrayList

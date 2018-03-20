@@ -34,16 +34,23 @@ namespace BoVoyage.UIL.Controllers
             }
             return listePays;
         }
-        public IEnumerable<Regions> PutallRegions(int id)
+        public IEnumerable<Regions> PutallRegions(int idPays)
         {
 
-            ArrayList liste = Context.PutallRegions(id);
+            ArrayList liste = Context.PutallRegions(idPays);
             List<Regions> listeRegions = new List<Regions>();
-            for (int i = 0; i < liste.Count; i += 2)
+            if (liste != null)
             {
-                listeRegions.Add(new Regions { id = int.Parse(liste[i].ToString()), nom = liste[i + 1].ToString() });
+                for (int i = 0; i < liste.Count; i += 2)
+                {
+                    listeRegions.Add(new Regions { id = int.Parse(liste[i].ToString()), nom = liste[i + 1].ToString() });
+                }
+                return listeRegions;
             }
-            return listeRegions;
+            else
+            {
+                return null;
+            }
         }
 
     }//On aura a définir d'autres modèles
