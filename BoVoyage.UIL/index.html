@@ -47,7 +47,7 @@
             }
         });
         function afficheContinent(liste) {
-            var continent = '<option value="" disabled  selected>Choisissez le continent</option>';
+            var continent = '<option value="" selected>Choisissez le continent</option>';
             if (liste != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                 for (i = 0; i < liste.length; i++) {
                     continent += '<option id="' + liste[i].id + '" class="continent" onclick="afficheDiv()" href="#">' + liste[i].nom + '</option>';
@@ -74,36 +74,34 @@
             });
         }
         function affichePays(liste) {
-            var pays = ' <option value="" disabled selected>Choisissez le pays</option>';
+            var pays = ' <option value="" selected>Choisissez le pays</option>';
             if (liste != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                 for (i = 0; i < liste.length; i++) {
                     pays += '<option id="' + liste[i].id + '" class="pays"  onclick="afficheDiv2()" href="#">' + liste[i].nom + '</option>';
                     $('#paysSelection').html(pays);
                 }
             } else return null;
-
             $('#paysSelection').change(function () {
-                    var id = $('#continentSelection').find(':selected')[0].id;
-                    var idPays = $('#paysSelection').find(':selected')[0].id;
-                    $.ajax({
-                        type: "PUT",
-                        url: url + "/" + id + "/" + idPays,
-                        ContentType: "application/json",
-                        DataType: "application/json",
-                        success: function (data, status) {
-                            if (status == "success") {
-                                afficheRegions(data);
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            $('#message').html('Erreur de communication');
+                var id = $('#continentSelection').find(':selected')[0].id;
+                var idPays = $('#paysSelection').find(':selected')[0].id;
+                $.ajax({
+                    type: "PUT",
+                    url: url + "/" + id + "/" + idPays,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            afficheRegions(data);
                         }
-                    });
-                
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
             });
         }
         function afficheRegions(liste) {
-            var regions = '<option value="" disabled selected>Choisissez la région</option>';
+            var regions = '<option value="" selected>Choisissez la région</option>';
             if (liste != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                 for (i = 0; i < liste.length; i++) {
                     regions += '<option id="' + liste[i].id + '" class="regions" href="#">' + liste[i].nom + '</option>';
@@ -119,10 +117,36 @@
             $('#regionSelection').removeClass("hidden");//A fusionner avec son clone du dessus si temps(Voir avec un getelementbyid(?))
         }
         $('#btnrecherche').click(function () {
-            var id = $('#continentSelection').find(':selected')[0].id;
+            //SELECTION CONTINENT UNIQUEMENT
+           // var id = $('#continentSelection').find(':selected')[0].id;
+            var idPays = $('#paysSelection').find(':selected')[0].id;
+            //$.ajax({
+            //    type: "GET",
+            //    url: url + id,
+            //    ContentType: "application/json",
+            //    DataType: "application/json",
+            //    success: function (data, status) {
+            //        if (status == "success") {
+            //            var voyage = '';
+            //            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
+            //                for (i = 0; i < data.length; i++) {
+            //                    voyage += '<div class="col-sm-6 col-md-4" ><div class="thumbnail"><img style="width:100%" src="' + data[i].nomImage + '">';
+            //                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+            //                    voyage += '</div></div></div>';
+            //                    $('#cibleThumb').html(voyage);
+            //                }
+            //            } else return null;
+            //        }
+            //    },
+            //    error: function (xhr, status, error) {
+            //        $('#message').html('Erreur de communication');
+            //    }
+            //});//FIN SELECTION CONTINENT
+            //DEBUT SELECT VIA PAYS
+            url1 = "http://localhost:61325/api/recherche/?idPays=";
             $.ajax({
-                type: "GET",
-                url: url+id,
+                type: "POST",
+                url: url1 + idPays,
                 ContentType: "application/json",
                 DataType: "application/json",
                 success: function (data, status) {
@@ -130,7 +154,7 @@
                         var voyage = '';
                         if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                             for (i = 0; i < data.length; i++) {
-                                voyage += '<div class="col-sm-6 col-md-4" ><div class="thumbnail"><img style="width:100%" src="'+ data[i].nomImage + '">';
+                                voyage += '<div class="col-sm-6 col-md-4"><div class="thumbnail" ><img style="width:100%" src="' + data[i].nomImage + '">';
                                 voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
                                 voyage += '</div></div></div>';
                                 $('#cibleThumb').html(voyage);
@@ -142,7 +166,48 @@
                     $('#message').html('Erreur de communication');
                 }
             });
+
         });
     </script>
 </body>
 </html>
+<!--var idPays = $('#paysSelection').find(':selected')[0].id;
+            if ($('#regionSelection').find(':selected')[0].id != null) {
+                var idRegions = $('#regionSelection').find(':selected')[0].id;
+            }else return null;
+            if (id && idPays && idRegions != null) {
+                $.ajax({
+                    type: "GET",
+                    url: url + id + idPays+idRegions,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            var voyage = '';
+                            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
+                                for (i = 0; i < data.length; i++) {
+                                    voyage += '<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <img style="width:100%" src="' + data[i].nomImage + '">';
+        voyage += '<div class="caption">
+            <h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+            voyage += '
+        </div>
+    </div>
+</div>';
+                                    $('#cibleThumb').html(voyage);
+                                }
+                            } else return null;
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
+            }
+
+            else if (idRegions == null && idPays== null) {
+
+            }
+            else if (idRegions == null) }
+                else return null; {-->

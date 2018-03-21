@@ -25,7 +25,6 @@ namespace BoVoyage.UIL.Controllers
         }
         public IEnumerable<Pays> POSTallPays(int id)
         {
-
             ArrayList liste = Context.POSTallPays(id);
             List<Pays> listePays = new List<Pays>();
             for (int i = 0; i < liste.Count; i += 2)
@@ -64,6 +63,50 @@ namespace BoVoyage.UIL.Controllers
                        nomImage = liste[i + 2].ToString(), description = liste[i + 3].ToString(), prix = int.Parse(liste[i + 4].ToString()) });
             
                     }
+                return listeVoyage;
+            }
+            else return null;
+        }
+        public IEnumerable<Voyage> PostAllVoyagesByContinent([FromUri]int idPays)
+        {
+            ArrayList liste = Context.PostAllVoyagesByContinent(idPays);
+            List<Voyage> listeVoyage = new List<Voyage>();
+            if (liste != null)
+            {
+                for (int i = 0; i < liste.Count; i += 5)
+                {
+                    listeVoyage.Add(new Voyage
+                    {
+                        id = int.Parse(liste[i].ToString()),
+                        titre = liste[i + 1].ToString(),
+                        nomImage = liste[i + 2].ToString(),
+                        description = liste[i + 3].ToString(),
+                        prix = int.Parse(liste[i + 4].ToString())
+                    });
+
+                }
+                return listeVoyage;
+            }
+            else return null;
+        }
+        public IEnumerable<Voyage> GETAllVoyagesByPays(int idRegions)
+        {
+            ArrayList liste = Context.GETAllVoyagesByPays(idRegions);
+            List<Voyage> listeVoyage = new List<Voyage>();
+            if (liste != null)
+            {
+                for (int i = 0; i < liste.Count; i += 5)
+                {
+                    listeVoyage.Add(new Voyage
+                    {
+                        id = int.Parse(liste[i].ToString()),
+                        titre = liste[i + 1].ToString(),
+                        nomImage = liste[i + 2].ToString(),
+                        description = liste[i + 3].ToString(),
+                        prix = int.Parse(liste[i + 4].ToString())
+                    });
+
+                }
                 return listeVoyage;
             }
             else return null;
