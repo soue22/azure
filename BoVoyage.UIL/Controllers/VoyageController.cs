@@ -16,7 +16,12 @@ namespace BoVoyage.UIL.Controllers
         public IEnumerable<Voyage> GetAllVoyages(int idVoyage)
         {
             ArrayList liste = Context.GetAllVoyages(idVoyage);
-            return null;
+            List<Voyage> listeVoyage= new List<Voyage>();
+            for (int i = 0; i < liste.Count; i += 2)
+            {
+                listeVoyage.Add(new Voyage { id = int.Parse(liste[i].ToString()), titre = liste[i + 1].ToString() });
+            }
+            return listeVoyage;
         }
     }
 }

@@ -7,7 +7,10 @@ namespace BoVoyage.UIL.Models
 {
     public class Voyage
     {
-        public string nom;
+        public string titre;
         public int id;
+        public string nomImage;
+        public string description;
+        public decimal prix;
     }
 }

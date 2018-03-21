@@ -24,7 +24,7 @@ namespace BoVoyage.UIL
                routeTemplate: "api/{controller}/{id}/{idPays}"
            );
             config.Routes.MapHttpRoute(
-               name: "ApiPays",
+               name: "ApiVoyage",
                routeTemplate: "api/{controller}/{idVoyage}"
            );
         }
