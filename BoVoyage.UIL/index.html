@@ -156,7 +156,7 @@
                             if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                                 for (i = 0; i < data.length; i++) {
                                     voyage += '<div class="col-sm-6 col-md-4"><div class="thumbnail" ><img style="width:100%" src="' + data[i].nomImage + '">';
-                                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+                                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">'+data[i].prix+'</a></p>';
                                     voyage += '</div></div></div>';
                                     $('#cibleThumb').html(voyage);
                                 }
