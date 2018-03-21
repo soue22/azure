@@ -14,7 +14,6 @@
 </head>
 <body>
     <div class="container whiteBkgrndOpacity">
-
         <h1>Bienvenue sur BoVoyage > Recherche</h1>
         <!-- SELECT DES CONTINENTS -->
         <select name="continent" class="marginTop form-control" id="continentSelection"></select>
@@ -23,10 +22,9 @@
         <!-- SELECT DES RÉGIONS -->
         <select name="region" class="marginTop form-control hidden" id="regionSelection"></select>
         <button id="btnrecherche" class="marginTop btn btn-primary">Rechercher</button>
-        <p id="message"></p>
+        <!--<p id="message"></p>-->
         <!-- Exemple de thumbnail pour liste des objets retournés -->
         <div class="marginTop row" id="cibleThumb">
-
         </div>
         <!-- FIN EXEMPLE /!\Au div class row -->
     </div>
@@ -118,60 +116,10 @@
         }
         $('#btnrecherche').click(function () {
             //SELECTION CONTINENT UNIQUEMENT
-            // var id = $('#continentSelection').find(':selected')[0].id;
-            //var idPays = $('#paysSelection').find(':selected')[0].id;
-            //$.ajax({
-            //    type: "GET",
-            //    url: url + id,
-            //    ContentType: "application/json",
-            //    DataType: "application/json",
-            //    success: function (data, status) {
-            //        if (status == "success") {
-            //            var voyage = '';
-            //            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
-            //                for (i = 0; i < data.length; i++) {
-            //                    voyage += '<div class="col-sm-6 col-md-4" ><div class="thumbnail"><img style="width:100%" src="' + data[i].nomImage + '">';
-            //                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
-            //                    voyage += '</div></div></div>';
-            //                    $('#cibleThumb').html(voyage);
-            //                }
-            //            } else return null;
-            //        }
-            //    },
-            //    error: function (xhr, status, error) {
-            //        $('#message').html('Erreur de communication');
-            //    }
-            //});//FIN SELECTION CONTINENT
-            //DEBUT SELECT VIA PAYS
-
-            //url1 = "http://localhost:61325/api/recherche/?idPays=";
-            //$.ajax({
-            //    type: "POST",
-            //    url: url1 + idPays,
-            //    ContentType: "application/json",
-            //    DataType: "application/json",
-            //    success: function (data, status) {
-            //        if (status == "success") {
-            //            var voyage = '';
-            //            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
-            //                for (i = 0; i < data.length; i++) {
-            //                    voyage += '<div class="col-sm-6 col-md-4"><div class="thumbnail" ><img style="width:100%" src="' + data[i].nomImage + '">';
-            //                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
-            //                    voyage += '</div></div></div>';
-            //                    $('#cibleThumb').html(voyage);
-            //                }
-            //            } else return null;
-            //        }
-            //    },
-            //    error: function (xhr, status, error) {
-            //        $('#message').html('Erreur de communication');
-            //    }
-            //});
-            url2 = "http://localhost:61325/api/recherche/?idRegions=";
-            var idRegions = $('#regionSelection').find(':selected')[0].id;
+            var id = $('#continentSelection').find(':selected')[0].id;
             $.ajax({
                 type: "GET",
-                url: url2 + idRegions,
+                url: url + id,
                 ContentType: "application/json",
                 DataType: "application/json",
                 success: function (data, status) {
@@ -179,9 +127,9 @@
                         var voyage = '';
                         if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
                             for (i = 0; i < data.length; i++) {
-                                voyage += '<div class="col-sm-6 col-md-4"> <div class="thumbnail"><img style="width:100%" src="' + data[i].nomImage + '">';
+                                voyage += '<div class="col-sm-6 col-md-4" ><div class="thumbnail"><img style="width:100%" src="' + data[i].nomImage + '">';
                                 voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
-                                voyage += '</div></div></div > ';
+                                voyage += '</div></div></div>';
                                 $('#cibleThumb').html(voyage);
                             }
                         } else return null;
@@ -191,7 +139,68 @@
                     $('#message').html('Erreur de communication');
                 }
             });
+            //FIN SELECTION CONTINENT
 
+            //DEBUT SELECT VIA PAYS
+            try {
+                url1 = "http://localhost:61325/api/recherche/?idPays=";
+                var idPays = $('#paysSelection').find(':selected')[0].id;
+                $.ajax({
+                    type: "POST",
+                    url: url1 + idPays,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            var voyage = '';
+                            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
+                                for (i = 0; i < data.length; i++) {
+                                    voyage += '<div class="col-sm-6 col-md-4"><div class="thumbnail" ><img style="width:100%" src="' + data[i].nomImage + '">';
+                                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+                                    voyage += '</div></div></div>';
+                                    $('#cibleThumb').html(voyage);
+                                }
+                            } else return null;
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
+            } catch(e){}
+            //FIN SELECTION VIA PAYS
+
+            //SELECTION VIA REGION
+            
+            try {
+                url2 = "http://localhost:61325/api/recherche/?idRegions=";
+                var idRegions = $('#regionSelection').find(':selected')[0].id;
+
+                $.ajax({
+                    type: "GET",
+                    url: url2 + idRegions,
+                    ContentType: "application/json",
+                    DataType: "application/json",
+                    success: function (data, status) {
+                        if (status == "success") {
+                            var voyage = '';
+                            if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
+                                for (i = 0; i < data.length; i++) {
+                                    voyage += '<div class="col-sm-6 col-md-4"> <div class="thumbnail"><img style="width:100%" src="' + data[i].nomImage + '">';
+                                    voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+                                    voyage += '</div></div></div > ';
+                                    $('#cibleThumb').html(voyage);
+                                }
+                            } else return null;
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').html('Erreur de communication');
+                    }
+                });
+            }
+            catch(e){ }
+             //FIN SELECTION VIA REGION
         });
     </script>
 </body>

@@ -13,9 +13,9 @@ namespace BoVoyage.UIL.Controllers
     public class RechercheController : ApiController
     {
         private Repository Context = new Repository();
-        public IEnumerable<Continent> GetAllContinents()
+        public IEnumerable<Continent> GETallContinents()
         {
-            ArrayList liste = Context.GetAllContinents();
+            ArrayList liste = Context.GETallContinents();
             List<Continent> listeContinents = new List<Continent>();
             for (int i = 0; i < liste.Count; i += 2)
             {
@@ -23,9 +23,9 @@ namespace BoVoyage.UIL.Controllers
             }
             return listeContinents;
         }
-        public IEnumerable<Pays> POSTallPays(int id)
+        public IEnumerable<Pays> POSTallPaysByIdContinent(int id)
         {
-            ArrayList liste = Context.POSTallPays(id);
+            ArrayList liste = Context.POSTallPaysByIdContinent(id);
             List<Pays> listePays = new List<Pays>();
             for (int i = 0; i < liste.Count; i += 2)
             {
@@ -33,10 +33,10 @@ namespace BoVoyage.UIL.Controllers
             }
             return listePays;
         }
-        public IEnumerable<Regions> PutallRegions(int idPays)
+        public IEnumerable<Regions> PUTallRegionsByPays(int idPays)
         {
 
-            ArrayList liste = Context.PutallRegions(idPays);
+            ArrayList liste = Context.PUTallRegionsByPays(idPays);
             List<Regions> listeRegions = new List<Regions>();
             if (liste != null)
             {
@@ -51,9 +51,9 @@ namespace BoVoyage.UIL.Controllers
                 return null;
             }
         }
-        public IEnumerable<Voyage> GetAllVoyages(int id)
+        public IEnumerable<Voyage> GETallVoyagesByContinent(int id)
         {
-            ArrayList liste = Context.GetAllVoyages(id);
+            ArrayList liste = Context.GETallVoyagesByContinent(id);
             List<Voyage> listeVoyage = new List<Voyage>();
             if (liste != null)
             {
@@ -67,9 +67,9 @@ namespace BoVoyage.UIL.Controllers
             }
             else return null;
         }
-        public IEnumerable<Voyage> PostAllVoyagesByContinent([FromUri]int idPays)
+        public IEnumerable<Voyage> POSTallVoyagesByPays([FromUri]int idPays)
         {
-            ArrayList liste = Context.PostAllVoyagesByContinent(idPays);
+            ArrayList liste = Context.POSTallVoyagesByPays(idPays);
             List<Voyage> listeVoyage = new List<Voyage>();
             if (liste != null)
             {
@@ -89,9 +89,9 @@ namespace BoVoyage.UIL.Controllers
             }
             else return null;
         }
-        public IEnumerable<Voyage> GETAllVoyagesByPays(int idRegions)
+        public IEnumerable<Voyage> GETallVoyagesByRegions(int idRegions)
         {
-            ArrayList liste = Context.GETAllVoyagesByPays(idRegions);
+            ArrayList liste = Context.GETallVoyagesByRegions(idRegions);
             List<Voyage> listeVoyage = new List<Voyage>();
             if (liste != null)
             {

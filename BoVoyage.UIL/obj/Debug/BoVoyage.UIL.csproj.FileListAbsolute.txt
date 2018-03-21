@@ -628,3 +628,6 @@ S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.csproj.CoreC
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.csproj.CopyComplete
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\obj\Debug\BoVoyage.UIL.pdb
+S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Collections.Immutable.dll
+S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.FileSystem.dll
+S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.FileSystem.Primitives.dll
