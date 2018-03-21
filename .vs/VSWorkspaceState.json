@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BoVoyage.BOL",
+    "\\BoVoyage.UIL",
+    "\\BoVoyage.UIL\\App_Start",
+    "\\BoVoyage.UIL\\Controllers",
+    "\\BoVoyage.UIL\\Models"
   ],
-  "SelectedNode": "\\ProjetWebStatic.sln",
+  "SelectedNode": "\\BoVoyage.UIL\\Controllers\\VoyageController.cs",
   "PreviewInSolutionExplorer": false
 }
