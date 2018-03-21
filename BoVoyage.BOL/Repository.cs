@@ -189,97 +189,97 @@ namespace BoVoyage.BOL
         {
             switch (idRegions)
             {
-                case 11:
+                case 111:
                     return new ArrayList(5){
                         2354, "Séjour pas cher en Floride" ,"Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         2355, "Séjour pas cher en Texas","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 12:
+                case 112:
                     return new ArrayList(5){
                         2221, " Quebec en dernière minute","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         2222, " Montreal en 3 jours","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 13:
+                case 121:
                     return new ArrayList(5){
                          5001, "Plongée sous marine à Cancun","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5012, "Séjour Mexico derniéres places","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 14:
+                case 122:
                     return new ArrayList(5){
                          5002, " Séjour pas cher à Santa Cruz","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5022, "  Séjour de reve à Buenos Aires","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 21:
+                case 131:
                     return new ArrayList(5){
                  5003, "Phuket et ses iles paradisiaques","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5004, " Profitez des Cascades à  Bangkok","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 22:
+                case 132:
                     return new ArrayList(5){
                50024, "Sable blanc des iles de Kuala Lampur","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50025, "Derniéres minutes pour un séjour à Ipoh","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 23:
+                case 141:
                     return new ArrayList(5){
                          5005, " Escale à Tokyo","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5015, " Voyage à Okazaki","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 24:
+                case 142:
                     return new ArrayList(5) {
                  5006, "Séjour dernière  minute à Delhi","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5016, "Séjour dernière  minute à Mumbai","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 31:
+                case 211:
                     return new ArrayList(5) {
                 50017, "Spa et Thalasso en Bretagne","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50027, "Weekend dans le Var","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 32:
+                case 212:
                     return new ArrayList(5) {
-               5008, "Douceur de  Florence","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
+                        5008, "Douceur de  Florence","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5018, "Visitez Pompei à partir de Naples","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 33:
+                case 221:
                     return new ArrayList(5){
                5009, "Départ Immediat à Barcelone","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         5039, "Carnaval à seville","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 34:
+                case 222:
                     return new ArrayList(5){
                 50010, "venez profiter du soleil de Marrakech","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50045, "Belles plage de Hurgada ","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 41:
+                case 232:
                     return new ArrayList(5){
                 50011, " Séjour pas cher à Dakar","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50041, " Séjour pas cher à Dahra","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 42:
+                case 242:
                     return new ArrayList(5){
                 50012, " Djerba plages et sable fin","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50312, " Tunis Pas cher","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 43:
+                case 311:
                     return new ArrayList(5){
                50013, "Safari unique Johannesburg","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                         50435, "Safari unique Le Cap","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,
                     };
 
-                case 55:
+                case 312:
                     return new ArrayList(5)
                 {
                         50236,"Decouverte de Bora Bora","Content/Images/afrique.jpg","hqzioepaunioveuazioup auuz,op ueiop azuioena etaznyzehazioeuaznopdusdioq fufuiopef ^zeufiçàu y", 1200,

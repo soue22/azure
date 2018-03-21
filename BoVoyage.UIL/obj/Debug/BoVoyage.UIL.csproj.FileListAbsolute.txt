@@ -581,15 +581,12 @@ S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\Microsoft.DiaSymReader.N
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\Microsoft.VisualBasic.Core.targets
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\Microsoft.Win32.Primitives.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.AppContext.dll
-S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Collections.Immutable.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Console.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Diagnostics.Process.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Diagnostics.StackTrace.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.Compression.dll
-S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.FileSystem.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
-S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.FileSystem.Primitives.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.IO.Pipes.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Reflection.Metadata.dll
 S:\Formation\Max\Projet\TD04new\BoVoyage.UIL\bin\roslyn\System.Security.AccessControl.dll
