@@ -81,11 +81,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\02a03f9787_76353_californie-canon-1886-01.jpg" />
+    <Content Include="Content\Images\afrique.jpg" />
+    <Content Include="Content\Images\afrique2.jpg" />
+    <Content Include="Content\Images\afrique3.jpg" />
     <Content Include="Content\Images\Aglou-plage-Arche-sur-la-plage-de-legzira.jpeg" />
+    <Content Include="Content\Images\fjords.jpg" />
+    <Content Include="Content\Images\images %281%29.jpg" />
+    <Content Include="Content\Images\images %282%29.jpg" />
+    <Content Include="Content\Images\images.jpg" />
     <Content Include="Content\Images\plageArbre.jpg" />
     <Content Include="Content\Images\plageChemin.jpg" />
     <Content Include="Content\Images\Plage_de_myrtos-min.JPG" />
     <Content Include="Content\Images\Plage_de_myrtos.JPG" />
+    <Content Include="Content\Images\téléchargement %281%29.jpg" />
+    <Content Include="Content\Images\téléchargement %282%29.jpg" />
+    <Content Include="Content\Images\téléchargement.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
