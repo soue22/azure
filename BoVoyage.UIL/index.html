@@ -25,11 +25,13 @@
         <button id="btnrecherche" class="marginTop btn btn-primary">Rechercher</button>
         <p id="message"></p>
         <!-- Exemple de thumbnail pour liste des objets retournés -->
+        <div class="marginTop row" id="cibleThumb">
+
+        </div>
         <!-- FIN EXEMPLE /!\Au div class row -->
     </div>
     <script>
         url = "http://localhost:61325/api/recherche/";
-
         $.ajax({
             type: "GET",
             url: url,
@@ -38,21 +40,6 @@
             success: function (data, status) {
                 if (status == "success") {
                     afficheContinent(data);
-                }
-            },
-            error: function (xhr, status, error) {
-                $('#message').html('Erreur de communication');
-            }
-        });
-        url2 = "http://localhost:61325/api/voyage/";
-        $.ajax({
-            type: "GET",
-            url: url2,
-            ContentType: "application/json",
-            DataType: "application/json",
-            success: function (data, status) {
-                if (status == "success") {
-                    afficheVoyage(data);
                 }
             },
             error: function (xhr, status, error) {
@@ -96,22 +83,23 @@
             } else return null;
 
             $('#paysSelection').change(function () {
-                var id = $('#continentSelection').find(':selected')[0].id;
-                var idPays = $('#paysSelection').find(':selected')[0].id;
-                $.ajax({
-                    type: "PUT",
-                    url: url + "/" + id + "/" + idPays,
-                    ContentType: "application/json",
-                    DataType: "application/json",
-                    success: function (data, status) {
-                        if (status == "success") {
-                            afficheRegions(data);
+                    var id = $('#continentSelection').find(':selected')[0].id;
+                    var idPays = $('#paysSelection').find(':selected')[0].id;
+                    $.ajax({
+                        type: "PUT",
+                        url: url + "/" + id + "/" + idPays,
+                        ContentType: "application/json",
+                        DataType: "application/json",
+                        success: function (data, status) {
+                            if (status == "success") {
+                                afficheRegions(data);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            $('#message').html('Erreur de communication');
                         }
-                    },
-                    error: function (xhr, status, error) {
-                        $('#message').html('Erreur de communication');
-                    }
-                });
+                    });
+                
             });
         }
         function afficheRegions(liste) {
@@ -130,30 +118,31 @@
         function afficheDiv2() {
             $('#regionSelection').removeClass("hidden");//A fusionner avec son clone du dessus si temps(Voir avec un getelementbyid(?))
         }
-        function afficheVoyage(liste) {
-            var voyage = '';
-            if (liste != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
-                for (i = 0; i < liste.length; i++) {
-                    voyage += '<option id="' + liste[i].id + '" class="continent" onclick="afficheDiv()" href="#">' + liste[i].nom + '</option>';
-                    $('#continentSelection').html(continent);
-
+        $('#btnrecherche').click(function () {
+            var id = $('#continentSelection').find(':selected')[0].id;
+            $.ajax({
+                type: "GET",
+                url: url+id,
+                ContentType: "application/json",
+                DataType: "application/json",
+                success: function (data, status) {
+                    if (status == "success") {
+                        var voyage = '';
+                        if (data != null) {//Vérification que la liste est bien remplie, sinon return null(Esquive d'une exception!)
+                            for (i = 0; i < data.length; i++) {
+                                voyage += '<div class="col-sm-6 col-md-4" ><div class="thumbnail"><img style="width:100%" src="'+ data[i].nomImage + '">';
+                                voyage += '<div class="caption"><h3>' + data[i].titre + '</h3><p>' + data[i].description + '</p><p><a href="#" class="btn btn-primary" role="button">Voir</a></p>';
+                                voyage += '</div></div></div>';
+                                $('#cibleThumb').html(voyage);
+                            }
+                        } else return null;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('#message').html('Erreur de communication');
                 }
-            } else return null;
-
+            });
+        });
     </script>
 </body>
 </html>
-
-
-<div class="marginTop row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img style="width:100%" src="http://fakeimg.pl/300x100/">
-            <div class="caption">
-                <h3>NomDuVoyage</h3>
-                <p>.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. quand un peintre anonyme assem</p>
-                <p><a href="#" class="btn btn-primary" role="button">Voir</a></p>
-            </div>
-        </div>
-    </div>
-</div>

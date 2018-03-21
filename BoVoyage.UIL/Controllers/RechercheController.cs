@@ -52,6 +52,22 @@ namespace BoVoyage.UIL.Controllers
                 return null;
             }
         }
+        public IEnumerable<Voyage> GetAllVoyages(int id)
+        {
+            ArrayList liste = Context.GetAllVoyages(id);
+            List<Voyage> listeVoyage = new List<Voyage>();
+            if (liste != null)
+            {
+                for (int i = 0; i < liste.Count; i += 5)
+                {
+                   listeVoyage.Add(new Voyage { id = int.Parse(liste[i].ToString()), titre = liste[i + 1].ToString(),
+                       nomImage = liste[i + 2].ToString(), description = liste[i + 3].ToString(), prix = int.Parse(liste[i + 4].ToString()) });
+            
+                    }
+                return listeVoyage;
+            }
+            else return null;
+        }
 
     }//On aura a définir d'autres modèles
 }

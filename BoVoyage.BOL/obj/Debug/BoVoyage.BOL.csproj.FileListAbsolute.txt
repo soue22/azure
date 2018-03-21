@@ -36,3 +36,8 @@ S:\Formation\souad\projetWebApi(2)\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csprojRes
 S:\Formation\souad\projetWebApi(2)\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
 S:\Formation\souad\projetWebApi(2)\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
 S:\Formation\souad\projetWebApi(2)\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
+S:\Formation\Max\Projet\TD04new\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.dll
+S:\Formation\Max\Projet\TD04new\BoVoyage.BOL\bin\Debug\BoVoyage.BOL.pdb
+S:\Formation\Max\Projet\TD04new\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.csproj.CoreCompileInputs.cache
+S:\Formation\Max\Projet\TD04new\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.dll
+S:\Formation\Max\Projet\TD04new\BoVoyage.BOL\obj\Debug\BoVoyage.BOL.pdb
